@@ -76,7 +76,7 @@ export const Nav = styled.header`
 	font-size: 1.8rem;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 800px) {
 	.nav-btn {
 		visibility: visible;
 		opacity: 1;

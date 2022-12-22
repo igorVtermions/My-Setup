@@ -24,7 +24,7 @@ export const Container = styled.section`
         justify-content: center;
         text-align: justify;
         width: 40%;
-        gap: 10px;
+        gap: 40px;
         font-weight: bolder;
         color: gray;
     }
@@ -35,6 +35,29 @@ export const Container = styled.section`
 
     .line{
         font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        padding-top: 10vh;
+
+        .presentation{
+            flex-direction: column;
+        }
+        .hello{
+            width: 100%;
+        }
+        .text{
+            width: 90%;
+        }
+
+        .tittle{
+        font-size: 2rem;
+    }
+
+    .line{
+        font-size: 1rem;
+    }
+
     }
 
 `

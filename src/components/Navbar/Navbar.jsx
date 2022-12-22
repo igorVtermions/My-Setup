@@ -21,7 +21,7 @@ export function Navbar(){
                     <Link className="option fist">Periféricos</Link>
                     <Link className="option">Acessórios</Link>
                     <Link className="option">Sobre nós</Link>
-                    <Link className="option">Suporte</Link>
+                    <Link className="option" to="/suporte">Suporte</Link>
               
 
                     <Link to="/" className="btn"><button className="btn login">Entrar</button></Link>
