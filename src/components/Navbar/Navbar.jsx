@@ -1,23 +1,43 @@
 import { Nav } from "./style";
 import logo from "../../assets/logo.png"
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa"
 
 export function Navbar(){
+
+    const navRef = useRef()
+
+    const showNavbar = () =>{
+        navRef.current.classList.toggle("responsive_nav");
+    }
 
     return(
         <Nav>
             <Link to="/" className="img"><img src={logo} alt="logo" /></Link>
 
-            <div className="category">
-                <ul className="item">
-                    <Link className="option"><li>Periféricos</li></Link>
-                    <Link className="option"><li>Acessórios</li></Link>
-                    <Link className="option"><li>Sobre nós</li></Link>
-                    <Link className="option"><li>Suporte</li></Link>
-                </ul>
+            <div className="category" ref={navRef}>
+                
+                    <Link className="option fist">Periféricos</Link>
+                    <Link className="option">Acessórios</Link>
+                    <Link className="option">Sobre nós</Link>
+                    <Link className="option">Suporte</Link>
+              
+
+                    <Link to="/" className="btn"><button className="btn login">Entrar</button></Link>
+
+            <button
+				className="nav-btn nav-close-btn"
+				onClick={showNavbar}>
+				<FaTimes />
+            </button>
+
             </div>
 
-            <Link to="/" className="btn"><button>Entrar</button></Link>
+            
+            <button className="nav-btn" onClick={showNavbar}>
+				<FaBars />
+			</button>
         </Nav>
     )
 }
