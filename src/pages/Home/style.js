@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    color: blue;
     padding-top: 13vh;
     display: flex;
     justify-content: center;
