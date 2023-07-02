@@ -26,7 +26,7 @@ export function Footer() {
         </div>
       </div>
       <div class="footer2">
-        <p>&copy; MY SETUP</p>
+        <p>&copy; Igor Vinicius</p>
       </div>
     </Container>
   );

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  padding-top: 10vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
 
   .presentation {
     display: flex;
