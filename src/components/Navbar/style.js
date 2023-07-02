@@ -4,9 +4,7 @@ export const Nav = styled.header`
     display: flex;
 	align-items: center;
 	justify-content: space-between;
-    position: fixed;
 	height: 7rem;
-	padding: 0 2rem;
     width: 100%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
