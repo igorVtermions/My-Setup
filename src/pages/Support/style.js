@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-margin-top: 30px;
+margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
 
   .presentation {
     display: flex;
@@ -89,7 +92,7 @@ margin-top: 30px;
   }
 
   @media only screen and (max-width: 1024px) {
-    margin-top: 42px;
+    margin-top: 200px;
 
     .presentation {
       flex-direction: column;
@@ -105,5 +108,9 @@ margin-top: 30px;
     .form {
       width: 97%;
     }
+  }
+
+  @media only screen and (max-width: 350px) {
+    margin-top: 150px;
   }
 `;

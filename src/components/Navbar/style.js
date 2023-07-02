@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const Nav = styled.header`
     display: flex;
+    z-index: 1000;
 	align-items: center;
 	justify-content: space-between;
 	height: 7rem;
+    position: fixed;
+    top: 0;
     width: 100%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
