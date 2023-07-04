@@ -10,7 +10,7 @@ export const Container = styled.footer`
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.37);
   position: absolute;
-  bottom: -100px;
+  bottom: -500px;
   width: 100%;
 
   .footer01 {
