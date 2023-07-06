@@ -29,13 +29,9 @@ export const Nav = styled.header`
    .option{
         font-weight: bolder;
         text-decoration: none;
-        color: gray;
+        color: #8500b3;
         font-size: 20px;
         transition: all .3s ease-in-out;
-    }
-
-    .option:hover{
-        color: #8500b3;
     }
 
     button {
@@ -43,13 +39,12 @@ export const Nav = styled.header`
         font-weight: bold;
         font-size: 20px;
         background-color: transparent;
-        color: gray;
-        
-       
+        border: 2px solid #8500b3;
+        color: #8500b3;  
     }
     button:hover{
-        color: #8500b3;
-        border-color: #8500b3;
+        color: white;
+        background-color: #8500b3;
         
     }
 
@@ -58,7 +53,7 @@ export const Nav = styled.header`
         right: 5px;
         bottom: 35px;
         border-radius: 10px;
-        border: 2px solid gray;
+        border: 2px solid #8500b3;
         cursor: pointer;
         transition: all .3s ease-in-out;
 
