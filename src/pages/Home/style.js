@@ -18,7 +18,7 @@ export const Container = styled.section`
     padding: 30px;
     background-color: gray;
     height: 55%;
-    gap: 10px;
+    gap: 30px;
     border-radius: 20px;
 
     .imgCard {
@@ -78,6 +78,14 @@ export const Container = styled.section`
           font-size: 1.1rem;
         }
       }
+    }
+  }
+
+  @media only screen and (min-width: 2560px) {
+    .presentation{
+      .imgCard{
+      width: 18%;
+    }
     }
   }
 `;
