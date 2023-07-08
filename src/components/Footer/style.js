@@ -48,8 +48,16 @@ export const Container = styled.footer`
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.37);
-   text-align: center;
+    text-align: center;
     padding: 10px;
     font-weight: bolder;
+  }
+
+  @media only screen and (max-width: 500px) {
+    bottom: -650px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    bottom: -820px;
   }
 `;
