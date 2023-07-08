@@ -46,6 +46,14 @@ export const Container = styled.section`
     }
   }
 
+  @media only screen and (min-width: 2560px) {
+    .presentation {
+      .imgCard {
+        width: 18%;
+      }
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     .imgCard {
       display: none;
@@ -53,8 +61,9 @@ export const Container = styled.section`
   }
 
   @media only screen and (max-width: 500px) {
+    margin-top: 280px;
     .presentation {
-      height: 60%;
+      height: 80%;
       .text {
         .tittle {
           font-size: 3rem;
@@ -81,11 +90,7 @@ export const Container = styled.section`
     }
   }
 
-  @media only screen and (min-width: 2560px) {
-    .presentation{
-      .imgCard{
-      width: 18%;
-    }
-    }
+  @media only screen and (max-width: 320px) {
+    margin-top: 340px;
   }
 `;
