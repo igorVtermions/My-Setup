@@ -27,6 +27,11 @@ margin-top: 150px;
     gap: 40px;
     font-weight: bolder;
     color: gray;
+
+    .tittletwo {
+      color: gray;
+      font-size: 3.5rem;
+    }
   }
 
   .tittle {
@@ -45,15 +50,21 @@ margin-top: 150px;
     background-color: gray;
     padding: 20px;
     width: 60%;
-    height: 400px;
+    height: 600px;
     margin-top: 5vh;
     margin-bottom: 4vh;
     gap: 20px;
     border-radius: 10px;
 
-    .tittletwo {
-      color: white;
-      font-size: 2.5rem;
+
+
+    .inputText{
+      padding: 10px;
+      font-weight: bolder;
+      border-radius: 10px;
+      border: none;
+      width: 60%;
+      text-align: center;
     }
 
     .select {
