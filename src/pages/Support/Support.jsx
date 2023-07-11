@@ -1,10 +1,42 @@
-import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import { Container } from "./style";
+import { useState } from "react";
 
-export function Support(props) {
+export function Support() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMenssage] = useState("");
+  const [option, setOption] = useState("");
 
-  function toType(event){
-    props.altered(event.target.value)
+  function sendEmail(e) {
+    e.preventDefault();
+
+    if (name === "" || email === "" || message === "" || option === "") {
+      alert("Preencha todos os campos");
+      return;
+    }
+    const templateParams = {
+      from_name: name,
+      about: option,
+      message: message,
+      email: email,
+    };
+    emailjs
+      .send(
+        "service_w3qtvpp",
+        "template_6ammv4c",
+        templateParams,
+        "PIeKms1gUu-wOPqZp"
+      )
+      .then((res) => {
+        console.log("EMAIL ENVIADO", res.status, res.text);
+        setName('')
+        setEmail('')
+        setMenssage('')
+        setOption('')
+      }, (err) =>{
+        console.log("ERRO: ", err)
+      });
   }
 
   return (
@@ -18,38 +50,38 @@ export function Support(props) {
           </p>
         </div>
       </section>
-      <form action="submit" className="form">
+      <form action="submit" className="form" onSubmit={sendEmail}>
         <input
-        onChange={toType}
+          onChange={(e) => setName(e.target.value)}
           type="text"
           name="name"
           placeholder="Insira o nome..."
           className="inputText"
-          required={true}
         />
         <input
-        onChange={toType}
+          onChange={(e) => setEmail(e.target.value)}
           type="email"
           name="email"
           placeholder="Insira o seu email..."
           className="inputText"
-          required={true}
         />
-        <select onChange={toType} className="select" required={true}>
-          <option disabled selected>Escolha uma opção</option>
+        <select className="select" onChange={(e) => setOption(e.target.value)}>
+          <option disabled selected>
+            Escolha uma opção
+          </option>
           <option>Periféricos</option>
           <option>Decoração</option>
           <option>Outros</option>
         </select>
 
-        <textarea
+        <input
+          onChange={(e) => setMenssage(e.target.value)}
+          type="text"
           placeholder="Escreva aqui sua dúvida ou problema..."
           className="areatext"
-        ></textarea>
+        />
 
-        <button className="btn">
-          Enviar
-        </button>
+        <button className="btn">Enviar</button>
       </form>
     </Container>
   );
