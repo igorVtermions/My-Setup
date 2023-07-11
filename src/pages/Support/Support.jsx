@@ -6,12 +6,17 @@ export function Support() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMenssage] = useState("");
-  const [option, setOption] = useState("");
+  const [option, setOption] = useState("Escolha uma opção");
 
   function sendEmail(e) {
     e.preventDefault();
 
-    if (name === "" || email === "" || message === "" || option === "") {
+    if (
+      name === "" ||
+      email === "" ||
+      message === "" ||
+      option === "Escolha uma opção"
+    ) {
       alert("Preencha todos os campos");
       return;
     }
@@ -21,22 +26,26 @@ export function Support() {
       message: message,
       email: email,
     };
+
     emailjs
       .send(
         "service_w3qtvpp",
-        "template_6ammv4c",
+        "template_a8p9u0k",
         templateParams,
         "PIeKms1gUu-wOPqZp"
       )
-      .then((res) => {
-        console.log("EMAIL ENVIADO", res.status, res.text);
-        setName('')
-        setEmail('')
-        setMenssage('')
-        setOption('')
-      }, (err) =>{
-        console.log("ERRO: ", err)
-      });
+      .then(
+        () => {
+          console.log("envio concluido");
+          setName("");
+          setEmail("");
+          setMenssage("");
+          setOption("Escolha uma opção");
+        },
+        (err) => {
+          console.log("ERRO: ", err);
+        }
+      );
   }
 
   return (
@@ -74,14 +83,14 @@ export function Support() {
           <option>Outros</option>
         </select>
 
-        <input
+        <textarea
           onChange={(e) => setMenssage(e.target.value)}
           type="text"
           placeholder="Escreva aqui sua dúvida ou problema..."
           className="areatext"
-        />
+        ></textarea>
 
-        <button className="btn">Enviar</button>
+        <input type="submit" className="btn" value="Enviar" />
       </form>
     </Container>
   );
