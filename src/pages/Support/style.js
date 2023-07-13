@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-margin-top: 150px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,9 +56,7 @@ margin-top: 150px;
     gap: 20px;
     border-radius: 10px;
 
-
-
-    .inputText{
+    .inputText {
       padding: 10px;
       font-weight: bolder;
       border-radius: 10px;
@@ -100,6 +98,24 @@ margin-top: 150px;
     .btn:hover {
       background-color: #8500b3;
     }
+  }
+
+  .btnReset {
+    margin-top: 100px;
+    margin-left: -10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background: transparent;
+    color: #8500b3;
+    border: 2px #8500b3 solid;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  .btnReset:hover {
+    background: #8500b3;
+    color: white;
   }
 
   @media only screen and (max-width: 1024px) {

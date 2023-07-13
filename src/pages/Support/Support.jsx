@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { Container } from "./style";
-import { Conclusion } from "./conclusion/Conclusion"
+import { Conclusion } from "./conclusion/Conclusion";
 import { useState } from "react";
 
 export function Support() {
@@ -36,28 +36,31 @@ export function Support() {
         templateParams,
         "PIeKms1gUu-wOPqZp"
       )
-      .then(
-        () => {
-          setFormSubmitted(true)
-        })
-        .catch((err) => {
-          console.log("ERRO: ", err);
-        })
+      .then(() => {
+        setFormSubmitted(true);
+      })
+      .catch((err) => {
+        console.log("ERRO: ", err);
+      });
   }
 
   function resetForm() {
-    setName('');
-    setEmail('');
-    setMenssage('');
-    setOption('Escolha uma opção');
+    setName("");
+    setEmail("");
+    setMenssage("");
+    setOption("Escolha uma opção");
     setFormSubmitted(false);
   }
 
-  if(formSubmitted){
-    return(<Container>
-      <Conclusion />
-      <button onClick={resetForm}>Enviar outro formulário</button>
-    </Container>)
+  if (formSubmitted) {
+    return (
+      <Container>
+        <Conclusion />
+        <button onClick={resetForm} className="btnReset">
+          Enviar outro formulário
+        </button>
+      </Container>
+    );
   }
 
   return (
