@@ -7,7 +7,7 @@ export function Footer() {
       <div class="footer01">
         <div class="logo-footer">
           <img src={Logo} alt="logo" />
-          <p>&copy; 2022 - My Setup</p>
+          <p>&copy; 2023 - My Setup</p>
           <p>All Rights Preserved</p>
         </div>
         <div class="icons">
@@ -26,7 +26,7 @@ export function Footer() {
         </div>
       </div>
       <div class="footer2">
-        <p>&copy; MY SETUP</p>
+        <p>&copy; Igor Vinicius</p>
       </div>
     </Container>
   );
